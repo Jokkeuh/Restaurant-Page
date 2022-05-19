@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/Jokkeuh/Restaurant-Page/issues"
   },
-  "homepage": "https://github.com/Jokkeuh/Restaurant-Page#readme"
+  "homepage": "https://github.com/Jokkeuh/Restaurant-Page#readme",
+  "devDependencies": {
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  }
 }
