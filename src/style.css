@@ -1,0 +1,60 @@
+
+.container {
+    background-image: url(./img/italianImg.jpg);
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+    background-position-x: fixed;
+    background-position-y: fixed;
+    
+}
+
+.contentPage1{
+    
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 100vh;
+    background-color: #e2d9c59f;
+    z-index: 0;
+}
+
+.header{
+    border: 2px solid black;
+    display: flex;
+    top:  -5px;
+    position: fixed;
+    left: -5px;
+    
+    width: 105%;
+    height: 150px;
+    border-radius: 2%;
+    z-index: 2;
+    background-color: #DBAB85;
+    
+}
+
+.logo{
+    margin-top: 25px;
+    margin-left: 25px;
+    border: 2px solid black;
+    border-radius: 25%;
+    width: 100px;
+    height: 100px;
+    background-image: url("./img/logo.jpg");
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position-x: 50% ;
+    background-position-y: 50% ;
+
+}
+
+.footer{
+    bottom: 0px;
+    width: 100%;
+    height: 3rem;
+    background-color: #6F7714;
+    z-index: 3;
+    border-top-left-radius: 10%;
+}

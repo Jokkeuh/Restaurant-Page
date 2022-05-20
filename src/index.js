@@ -1,3 +1,9 @@
+
+import'./style.css';
+
+
+
+
 console.log("Twerkt")
 
 
@@ -11,6 +17,7 @@ const createDisplay = () => {
     const header = document.createElement("div");
     const footer = document.createElement("div");
     const logo =  document.createElement("div");
+
 
     
     container.setAttribute("id","container");
