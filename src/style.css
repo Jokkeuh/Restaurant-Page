@@ -48,6 +48,7 @@
 }
 
 .container {
+    margin: -15px;
     background-image: url(./img/italianImg.jpg);
     background-size: cover;
     font-family: "myFont2";
