@@ -9,6 +9,8 @@ console.log("Twerkt")
 
 
 
+
+
 const createDisplay = () => { 
     const mainScreen = document.getElementById("content");
 
@@ -17,13 +19,22 @@ const createDisplay = () => {
     const header = document.createElement("div");
     const footer = document.createElement("div");
     const logo =  document.createElement("div");
+
+    // imgs
     const imgOne = document.createElement("div");
     const imgTwo = document.createElement("div");
+
     //nav Bar
     const navTab = document.createElement("div");
     const navTabHome = document.createElement("div");
     const navTabMenu = document.createElement("div");
     const navTabContact = document.createElement("div");
+
+    //nav Buttons
+    const homeBtn = document.createElement("button");
+    const menuBtn = document.createElement("button");
+    const contactBtn = document.createElement("button");
+
 
     // footer
     const footerAdres = document.createElement("div")
@@ -35,11 +46,49 @@ const createDisplay = () => {
     const titleOnPage1 = document.createElement("div");
     const aboutUs = document.createElement("div");
     const hoursInfo = document.createElement("div");
-
     const paraPageOne = document.createElement("p")
 
+
+    let homePage = false;
+    let menuPage = false;
+    let contactPage = false;
+
+    
+    
+    
+    
+    const setPage = () => {
+
+        const bannerLight = document.getElementById("header")
+        /*const boxShadowHeader = ()=>{
+
+        }*/
+        if (homePage === true) {
+            console.log("last check home")
+            bannerLight.style.boxShadow ="rgb(12 51 0) 0px 20px 30px -10px"
+
+          
+        }
+        if (menuPage === true){
+            console.log("last check menu")
+            bannerLight.style.boxShadow = "rgb(255 255 255) 0px 20px 30px -10px"
+
+            
+            
+        }
+        if (contactPage === true){
+            console.log("last check contact")
+            bannerLight.style.boxShadow = "rgb(118 8 0) 0px 20px 30px -10px"
+
+            
+        }
+    }
+   
+    
+
+
   
-    // create divs
+    // set attributes
     container.setAttribute("id","container");
     container.setAttribute("class","container");
 
@@ -65,12 +114,48 @@ const createDisplay = () => {
   
     navTabHome.setAttribute("id","navHome")
     navTabHome.setAttribute("class","navHome")
-  
+    homeBtn.setAttribute("type","button")
+    homeBtn.setAttribute("id","homeBtn")
+    homeBtn.setAttribute("class","homeBtn")
+    homeBtn.addEventListener('click', () => {
+        
+        homePage = true;
+        menuPage = false;
+        contactPage = false;
+        setPage()
+        
+    })
+    
+
     navTabMenu.setAttribute("id","navMenu")
     navTabMenu.setAttribute("class","navMenu")
+    menuBtn.setAttribute("id","menuBtn")
+    menuBtn.setAttribute("class","menuBtn")
+    menuBtn.addEventListener('click', () => {
+        
+        
+        homePage = false;
+        menuPage = true;
+        contactPage = false;
+        setPage()
+        
+    })
+
   
     navTabContact.setAttribute("id","navContact")
     navTabContact.setAttribute("class","navContact")
+    contactBtn.setAttribute("id","contactBtn")
+    contactBtn.setAttribute("class","contactBtn")
+    contactBtn.addEventListener('click', () => {
+       
+        
+        
+        homePage = false;
+        menuPage = false;
+        contactPage = true;
+        setPage()
+        
+    })
 
 
   //page one
@@ -98,6 +183,8 @@ const createDisplay = () => {
     hoursInfo.setAttribute("id", "hoursInfo")
     hoursInfo.setAttribute("class", "hoursInfo")
 
+
+    
 
 
 
@@ -132,23 +219,42 @@ const createDisplay = () => {
         navTab.appendChild(navTabMenu);
         navTab.appendChild(navTabContact);
 
+        
+        
+
     }
+    console.log("runrun")
+    const tabClick = (e) => {
+        console.log("click")
+        console.log("rzqr");
+        }
+    
 
     const fillDiv = () => {
+
         navTabHome.innerText = "Home"
+        navTabHome.appendChild(homeBtn);
         navTabMenu.innerText = "Menu"
+        navTabMenu.appendChild(menuBtn)
         navTabContact.innerText = "Contact"
+        navTabContact.appendChild(contactBtn)
+
         footerAdres.innerText = "Crackhouselane nr 344"
         footerPhone.innerText = "GSM 032 494456923"
 
         titleOnPage1.innerText = "Welcome to the Italian Taste!"
         paraPageOne.innerText = "The Italian Taste is transforming your dining experience. This much loved Italian restaurant situated in the heart of Surbiton now offers a wider variety of traditional authentic Italian cuisine and an improved selection of fine wines and cocktails.Our restaurant offers a warm relaxing ambience for an enjoyable dining experience. Our culinary chef’s are renowned for their passion in cooking Italian cuisine."
-       
+        
     }
+    
     appendEach();
     fillDiv();
+
+    
+        
 }
 
 
-
 createDisplay()
+
+

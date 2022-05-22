@@ -63,6 +63,7 @@
 
 
 .contentPage1{
+    padding: 10px;
     text-align: center;
     display: flex;
     flex-direction: column-reverse;
@@ -160,8 +161,16 @@
     gap: 25px;
     z-index: 25;
 }
+.navTab > button {
+
+    width: 50px;
+    height: 50px;
+    border: 1px solid  rgb(255, 255, 255);
+    
+}
 
 .navTab > div{
+    position: relative;
     z-index: 25;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;text-align: center;
     font-size: 20px;
@@ -169,6 +178,31 @@
     border-top-right-radius: 25%;
     border-bottom: 0px solid rgb(255, 255, 255);
 
+    
+
+}
+
+.homeBtn, .contactBtn, .menuBtn{
+
+    display: flex;
+    position: absolute;
+    top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    /*border-style: none;*/
+    width: 80px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0);
+    border-style: none;
+
+}
+.menuBtn{
+    
+
+}
+.contactBtn{
     
 
 }
@@ -181,12 +215,15 @@
     color: white;
 }
 
+
+
 .navMenu{
     width: 75px;
     height: 50px;
     border: 1px solid black;
     background-color: rgb(255, 255, 255);
 }
+
 
 .navContact{
     width: 75px;
@@ -195,6 +232,7 @@
     background-color: rgb(179, 0, 0);
     color: white;
 }
+
 
 
 
