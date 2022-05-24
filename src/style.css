@@ -66,9 +66,9 @@
 
 
 
-.contentPage1,
-.contentPage2,
-.contentPage3{
+#contentPage1,
+#contentPage2,
+#contentPage3{
     padding: 10px;
     text-align: center;
     display: flex;

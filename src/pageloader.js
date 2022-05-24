@@ -1,15 +1,18 @@
-const mainScreen = document.getElementById("content");
-const fillInContainer = document.createElement("div");
-mainScreen.appendChild(fillInContainer)
+
+    const mainScreen = document.getElementById("content");
+    const fillInContainer = document.createElement("div");
+    fillInContainer.setAttribute("class","fillIn")
+    fillInContainer.setAttribute("id","fillIn")
+
 
 
 
 const PageThree = () => {
 
 
-    const mainScreen = document.getElementById("content");
-    const contentPage3 = document.createElement("div")
     
+    const contentPage3 = document.createElement("div")
+    mainScreen.appendChild(fillInContainer)
     
     // content on page 3
 
@@ -19,7 +22,7 @@ const PageThree = () => {
     
 
     contentPage3.setAttribute("id","contentPage3");  
-    contentPage3.setAttribute("class","contentPage3");
+    contentPage3.setAttribute("class","contentPage");
    
 
 
@@ -54,6 +57,7 @@ const PageTwo = () => {
 
     const mainScreen = document.getElementById("content");
     const contentPage2 = document.createElement("div")
+    mainScreen.appendChild(fillInContainer)
     
     
     // content on page 2
@@ -64,7 +68,7 @@ const PageTwo = () => {
     
 
     contentPage2.setAttribute("id","contentPage2");  
-    contentPage2.setAttribute("class","contentPage2");
+    contentPage2.setAttribute("class","contentPage");
 
 
     const appendEach = () => {
@@ -72,9 +76,9 @@ const PageTwo = () => {
         
         console.log(contentPage2)
 
-        document.body.appendChild(mainScreen)
         
-        mainScreen.appendChild(contentPage2);
+        
+        fillInContainer.appendChild(contentPage2);
     }
     
     
@@ -108,7 +112,7 @@ const PageOne = () => {
  //page one
 
     contentPage1.setAttribute("id","contentPage1");  
-    contentPage1.setAttribute("class","contentPage1");
+    contentPage1.setAttribute("class","contentPage");
 
     imgOne.setAttribute("id", "imgOne")
     imgOne.setAttribute("class", "imgOne")
@@ -135,8 +139,12 @@ const PageOne = () => {
 
 
     const appendEach = () => {
-        document.body.appendChild(mainScreen);
-        mainScreen.appendChild(contentPage1);
+        
+        document.body.appendChild(mainScreen)
+        mainScreen.appendChild(fillInContainer)
+        fillInContainer.appendChild(contentPage1)
+
+
         viewScreen.appendChild(textOnPage1);
         textOnPage1.appendChild(paraPageOne);
 

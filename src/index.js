@@ -8,9 +8,14 @@ PageOne()
 CreateHeader()
 CreateFooter()
 
+const fillInContainer = document.getElementById("fillIn")
+
+const allPages = document.querySelectorAll("contentPage")
 
 
-console.log("Twerkt")
+const removePage =()=>{
+    fillInContainer.replaceChildren()
+}
 
 
 
@@ -83,24 +88,20 @@ const runDis =() => {
     homeBtn.addEventListener('click', () => {
         
         
-         
+        removePage()
         homePage = true;
         menuPage = false;
         contactPage = false;
-        PageOne()
-        setPage()  
-        
-        
-        
-        
-        
-        
+            PageOne()
+            setPage()  
+            console.log(fillInContainer)
+            
     })
 
 
     menuBtn.addEventListener('click', () => {
             
-            
+        removePage()
         homePage = false;
         menuPage = true;
         contactPage = false;
@@ -115,13 +116,16 @@ const runDis =() => {
 
     contactBtn.addEventListener('click', () => {
         
+        
+
             
-            
+        removePage()
         homePage = false;
         menuPage = false;
         contactPage = true;
         setPage()
         PageThree()
+        console.log(allPages)
 
         
         
