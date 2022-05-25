@@ -1,6 +1,6 @@
 
-    const mainScreen = document.getElementById("content");
-    const fillInContainer = document.createElement("div");
+const mainScreen = document.getElementById("content");
+const fillInContainer = document.createElement("div");
     fillInContainer.setAttribute("class","fillIn")
     fillInContainer.setAttribute("id","fillIn")
 
@@ -46,21 +46,48 @@ const PageThree = () => {
         
 } 
 
-
-
-
-
-
-
 const PageTwo = () => {
 
 
     const mainScreen = document.getElementById("content");
-    const contentPage2 = document.createElement("div")
-    mainScreen.appendChild(fillInContainer)
+    const contentPage2 = document.createElement("div");
+    mainScreen.appendChild(fillInContainer);
     
     
     // content on page 2
+
+    const menuContainer = document.createElement("div");
+    menuContainer.setAttribute("id","menuContainer");
+    menuContainer.setAttribute("class","menuContainer");
+    const menuTitle =  document.createElement("div");
+    const titleText = document.createElement("p");
+    
+
+    menuTitle.setAttribute("id","menuTitle")
+    menuTitle.setAttribute("class","menuTitle")
+    titleText.setAttribute("id","titleOnPageTwo")
+    titleText.setAttribute("class","titleOnPageTwo")
+    const imgOne = document.createElement("div");
+    const imgTwo = document.createElement("div");
+    const imgThree = document.createElement("div");
+
+    const images = document.createElement("div");
+
+    images.setAttribute("id", "imagesP2")
+    images.setAttribute("class", "imagesP2")
+
+
+    imgOne.setAttribute("id","imgOneP2")
+    imgOne.setAttribute("class", "imgOneP2")
+
+    imgTwo.setAttribute("id", "imgTwoP2")
+    imgTwo.setAttribute("class", "imgTwoP2")
+
+    imgThree.setAttribute("id", "imgThreeP2")
+    imgThree.setAttribute("class", "imgThreeP2")
+
+
+
 
 
   
@@ -72,26 +99,32 @@ const PageTwo = () => {
 
 
     const appendEach = () => {
-        console.log(mainScreen);
-        
-        console.log(contentPage2)
 
-        
-        
         fillInContainer.appendChild(contentPage2);
+        contentPage2.appendChild(menuContainer);
+
+        menuContainer.appendChild(menuTitle);
+        menuContainer.appendChild(menuTitle);
+        menuTitle.appendChild(titleText);
+        menuTitle.appendChild(titleText);
+
+        menuContainer.appendChild(images)
+        images.appendChild(imgOne)
+        images.appendChild(imgTwo)
+        images.appendChild(imgThree)
+
+    }
+    const fillDiv =()=>{
+        titleText.innerText ="MENU"
     }
     
     
     appendEach();
-    //fillDiv();
+    fillDiv();
 
     
         
 } 
-
-
-
-
 
 const PageOne = () => { 
     

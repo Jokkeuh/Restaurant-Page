@@ -11,6 +11,10 @@
     font-style: normal;
 }
 
+*{
+    margin: 0px;
+}
+
 
 .imgOne{
     position: absolute;
@@ -32,13 +36,12 @@
 }
 .imgTwo{
     position: absolute;
-    order: 5;
     border: 2px solid black;
     border-radius: 3%;
     margin-left: 25%;
     height: 150px;
     width: 250px;
-    bottom: 10%;
+    bottom: 0px;
     background-image: url(./img/pizza.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -47,19 +50,95 @@
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-.container,
 .content{
-    max-width: 100%;
-    max-height: 100%;
-    margin: -15px;
+
+    max-width: 100%;  
+    margin: 0px;
+    
     background-image: url(./img/italianImg.jpg);
-    background-size: 100%;
+    background-size: cover;
     font-family: "myFont2";
     
     background-repeat: no-repeat;
     background-position-x: fixed;
     background-position-y: fixed;
-    overflow: hidden;
+    
+}
+
+.menuContainer{
+    position: absolute;
+    width: 50%;
+    height: 150vh;
+    border: 2px solid rgba(230, 223, 223, 0.452);
+    background-image: url(./img/italianMenuPage.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+
+
+}
+
+.titleOnPageTwo{
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    font-size: 55px;
+    font-family: "myFont";
+    color: black;
+    top: 25vh;
+
+}
+
+.imagesP2{
+    display: flex;
+    gap: 25px   ;
+    border: 3px solid rgba(0, 0, 0, 0.349);
+    position: absolute;
+    bottom: 31.5vh;
+    border-radius: 2%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+    width: 100%;
+    height:12vh;
+}
+
+.imgOneP2{
+    
+    height: 100%;
+    width: 50%;
+    background-image: url(./img/blackPasta.jpg);
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border-right: 3px solid rgba(70, 70, 70, 0.349);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    
+    
+    
+
+}
+.imgTwoP2{
+    
+    height: 100%;
+    width: 50%;
+    background-image: url(./img/il-Giardino.jpg);
+    background-size: 100%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;    
+    border-left: 3px solid rgba(70, 70, 70, 0.349);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    border-right: 3px solid rgba(70, 70, 70, 0.349);
+}
+.imgThreeP2{
+    height: 100%;
+    width: 50%;
+    background-image: url(./img/canolli.jpg);
+    background-size: 100%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    border-left: 3px solid rgba(70, 70, 70, 0.349);
+
 }
 
 
@@ -77,7 +156,7 @@
     margin-right: auto;
     min-width: 300px;
     width: 50%;
-    height: 125vh;
+    height: 150vh;
     background-color: #e2d9c59f;
     z-index: 0;
     bottom: 0px;
@@ -90,8 +169,6 @@
     width: 100%;
     height: 65%;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-
-    
 }
 
 .textPageOne{
@@ -245,8 +322,7 @@
 
 
 .footer{
-    position: absolute;
-    
+    position: fixed;
     color: white;
     display: flex;
     justify-content: center;
@@ -255,7 +331,7 @@
     width: 100%;
     height: 3rem;
     font-size: 12px;
-    background-color: #262906;
+    background-color: #01200b6c;
     z-index: 3;
     border-top-left-radius: 10%;
     
