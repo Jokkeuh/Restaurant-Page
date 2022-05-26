@@ -75,13 +75,14 @@
 /*form, formInput, nameInput, phoneInput, questionInput,submitBtn*/
 
 .formInput{
-    font-size: 35px;
+    font-size: 30px;
     display: grid;
     grid-template-rows: 95px 95px;
     
-    
+    margin: 0px;
     background-color: rgba(97, 26, 26, 0.068);
     height: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     
     
 }
@@ -94,6 +95,7 @@
     position: absolute;
     bottom: 10%;
     right: 25%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .formInput label{
@@ -105,27 +107,34 @@
 
 .nameInput,
 .phoneInput,
-.questionInput{
+.questionInput,
+.emailInput{
     
     position: absolute;
-    max-width: 100%;
+    width: 80%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     
 }
 .nameInput{
     right: 0px;
-    top: 25px;
+    top: 5%;
     background-color: rgba(128, 128, 128, 0.521);
 
 }
+.emailInput{
+    right: 0px;
+    top: 17.5%;
+    background-color: rgba(128, 128, 128, 0.521);
+}
 .phoneInput{
     right: 0px;
-    top:15%;
+    top:30%;
     background-color: rgba(128, 128, 128, 0.521);
 
 }
 .questionInput{
     right: 0px;
-    top: 30%;
+    top: 45%;
     height: 50vh;
     width: 95%;
     background-color: rgba(128, 128, 128, 0.521);

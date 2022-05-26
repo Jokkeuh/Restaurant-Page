@@ -42,13 +42,20 @@ const PageThree = () => {
     const nameInput = document.createElement("input")
             nameInput.setAttribute("class","nameInput")
             nameInput.setAttribute("id","nameInput")
+
+    const emailInput = document.createElement("input")
+            emailInput.setAttribute("id","emailInput")
+            emailInput.setAttribute("class","emailInput")
+            emailInput.setAttribute("type","email")
     const phoneInput = document.createElement("input")
             phoneInput.setAttribute("class","phoneInput")
             phoneInput.setAttribute("id","phoneInput")
+            phoneInput.setAttribute("type","phone")
 
     const questionInput = document.createElement("Input")
             questionInput.setAttribute("class","questionInput")
             questionInput.setAttribute("id","questionInput")
+            questionInput.setAttribute("type","text")
     const submitBtn = document.createElement("button")
             submitBtn.setAttribute("class","submitBtn")
             submitBtn.setAttribute("id","submitBtn")
@@ -61,6 +68,9 @@ const PageThree = () => {
     const nameLabel = document.createElement("label");
             nameLabel.setAttribute("for", 'nameInput');
             nameLabel.innerHTML = "name";
+    const emailLabel = document.createElement("label");
+            emailLabel.setAttribute("for", "emailInput");
+            emailLabel.innerHTML = "email";
     const phoneLabel = document.createElement("label");
             phoneLabel.setAttribute("for", 'phoneInput');
             phoneLabel.innerHTML = "phone";
@@ -122,11 +132,15 @@ const PageThree = () => {
 
 
         formInput.appendChild(nameLabel)
+        formInput.appendChild(emailLabel)
         formInput.appendChild(phoneLabel)
         formInput.appendChild(questionLabel)
 
+
         formInput.appendChild(nameInput)
+        formInput.appendChild(emailInput)
         formInput.appendChild(phoneInput)
+
         formInput.appendChild(questionInput)
         formInput.appendChild(submitBtn)
 
