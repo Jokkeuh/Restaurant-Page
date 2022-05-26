@@ -11,18 +11,90 @@ const PageThree = () => {
 
 
     
-    const contentPage3 = document.createElement("div")
+    
     mainScreen.appendChild(fillInContainer)
+
+    
     
     // content on page 3
+    const contactEmployeeContainer = document.createElement("div")
+            contactEmployeeContainer.setAttribute("class","contactEmployeeContainer")
+            contactEmployeeContainer.setAttribute("id","contactEmployeeContainer")
+
+
+    const contactEmployee = document.createElement("div")
+            contactEmployee.setAttribute("class", "contactEmployee")
+            contactEmployee.setAttribute("id", "contactEmployee")
+
+    const ListEmployee = document.createElement("lu")
+            ListEmployee.setAttribute("class", "ListEmployee")
+            ListEmployee.setAttribute("id", "ListEmployee")
+
+    const formContainer = document.createElement("div")
+            formContainer.setAttribute("class", "formContainer")
+            formContainer.setAttribute("id", "formContainer")
+    const form = document.createElement("form")
+            form.setAttribute("class", "form")
+            form.setAttribute("id", "form")
+    const formInput = document.createElement("div")
+            formInput.setAttribute("class","formInput")
+            formInput.setAttribute("id","formInput")
+    const nameInput = document.createElement("input")
+            nameInput.setAttribute("class","nameInput")
+            nameInput.setAttribute("id","nameInput")
+    const phoneInput = document.createElement("input")
+            phoneInput.setAttribute("class","phoneInput")
+            phoneInput.setAttribute("id","phoneInput")
+
+    const questionInput = document.createElement("Input")
+            questionInput.setAttribute("class","questionInput")
+            questionInput.setAttribute("id","questionInput")
+    const submitBtn = document.createElement("button")
+            submitBtn.setAttribute("class","submitBtn")
+            submitBtn.setAttribute("id","submitBtn")
+
+        submitBtn.addEventListener("click",() =>{
+            window.alert("Thanks for contacting us!, we'll let you know soon")
+
+        })
+
+    const nameLabel = document.createElement("label");
+            nameLabel.setAttribute("for", 'nameInput');
+            nameLabel.innerHTML = "name";
+    const phoneLabel = document.createElement("label");
+            phoneLabel.setAttribute("for", 'phoneInput');
+            phoneLabel.innerHTML = "phone";
+    const questionLabel = document.createElement("label");
+            questionLabel.setAttribute("for", 'questionInput');
+            questionLabel.innerHTML = "Ask us a question!";
+
+        
+        
+
+
+            
+
+
+
+
+
+
+    let employees = document.createElement("p")
+           
+
+    
+
+    
+
+
 
 
   
     // set attributes
     
-
-    contentPage3.setAttribute("id","contentPage3");  
-    contentPage3.setAttribute("class","contentPage");
+    const contentPage3 = document.createElement("div")
+            contentPage3.setAttribute("id","contentPage3");  
+            contentPage3.setAttribute("class","contentPage");
    
 
 
@@ -33,14 +105,63 @@ const PageThree = () => {
 
         document.body.appendChild(mainScreen)
         mainScreen.appendChild(fillInContainer)
-        
+    
+
         fillInContainer.appendChild(contentPage3);
         fillInContainer.setAttribute("id","fillInContainer")
+
+        contentPage3.appendChild(formContainer)
+        contentPage3.appendChild(contactEmployeeContainer)
+
+        formContainer.appendChild(form)
+        contactEmployeeContainer.appendChild(contactEmployee)
+        contactEmployee.appendChild(ListEmployee)
+
+        form.appendChild(formInput)
+        
+
+
+        formInput.appendChild(nameLabel)
+        formInput.appendChild(phoneLabel)
+        formInput.appendChild(questionLabel)
+
+        formInput.appendChild(nameInput)
+        formInput.appendChild(phoneInput)
+        formInput.appendChild(questionInput)
+        formInput.appendChild(submitBtn)
+
+            //form, formInput, nameInput, phoneInput, questionInput,submitBtn
+
+
+
+        
+
+    }
+    
+    const fillDiv = () => {
+        const emp1 = document.createElement("li")
+            emp1.innerText =   "DikkieZjaka @ totallyLegit.com"
+        const emp2 = document.createElement("li")
+                emp2.textContent = "JorenDom @ totallyLegit.com"
+        const emp3 = document.createElement("li")
+                emp3.textContent = "JokkeuhTristan @ totallyLegitreally.com"
+
+        employees = [emp1, emp2, emp3]
+
+        nameInput.innerText ="Name"
+        submitBtn.innerHTML ="Send"
+
+        
+
+    for(let i = 0; i < employees.length; i++)
+            ListEmployee.appendChild(employees[i])
+            
+            
     }
     
     
     appendEach();
-    //fillDiv();
+    fillDiv();
 
     
         

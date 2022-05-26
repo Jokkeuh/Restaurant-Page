@@ -4,7 +4,7 @@ import{CreateHeader}from "./header.js"
 import{CreateFooter}from "./footer.js"
 import'./style.css';
 
-PageTwo()
+PageOne()
 CreateHeader()
 CreateFooter()
 
