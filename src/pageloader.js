@@ -47,15 +47,21 @@ const PageThree = () => {
             emailInput.setAttribute("id","emailInput")
             emailInput.setAttribute("class","emailInput")
             emailInput.setAttribute("type","email")
+            emailInput.setAttribute("pattern","[^ @]*@[^ @]*")
     const phoneInput = document.createElement("input")
             phoneInput.setAttribute("class","phoneInput")
             phoneInput.setAttribute("id","phoneInput")
-            phoneInput.setAttribute("type","phone")
+            phoneInput.setAttribute("type","tel")
+            phoneInput.setAttribute("pattern","[0-9]{3}-[0-9]{2}-[0-9]{3}")
+            phoneInput.setAttribute("value","123-45-678")
 
-    const questionInput = document.createElement("Input")
+    const questionInput = document.createElement("textarea")
             questionInput.setAttribute("class","questionInput")
             questionInput.setAttribute("id","questionInput")
-            questionInput.setAttribute("type","text")
+            questionInput.setAttribute("type","textarea")
+            questionInput.setAttribute("cols","40")
+            questionInput.setAttribute("rows","5")
+
     const submitBtn = document.createElement("button")
             submitBtn.setAttribute("class","submitBtn")
             submitBtn.setAttribute("id","submitBtn")
@@ -67,16 +73,21 @@ const PageThree = () => {
 
     const nameLabel = document.createElement("label");
             nameLabel.setAttribute("for", 'nameInput');
+            nameLabel.setAttribute("class", 'nameLabel');
             nameLabel.innerHTML = "name";
     const emailLabel = document.createElement("label");
             emailLabel.setAttribute("for", "emailInput");
             emailLabel.innerHTML = "email";
+            emailLabel.setAttribute("class", 'emailLabel');
     const phoneLabel = document.createElement("label");
             phoneLabel.setAttribute("for", 'phoneInput');
             phoneLabel.innerHTML = "phone";
+            phoneLabel.setAttribute("class", 'phoneLabel');
     const questionLabel = document.createElement("label");
             questionLabel.setAttribute("for", 'questionInput');
             questionLabel.innerHTML = "Ask us a question!";
+            questionLabel.setAttribute("class", 'questionLabel');
+            
 
         
         
